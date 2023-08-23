@@ -6,25 +6,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" media="screen" href="./styles.css" />
 		<title>Formulario</title>
+		<script src="../formulario.js" defer></script>  <!-- better to move script here with defer attribute -->
 	</head>
 	<body>
 		<h1>Bienvenidos a mi fiesta</h1>
 		<h2>Por favor, confirmar asistencia:</h2>
 
+		<!-- Ideally, use CSS for formatting/positioning elements instead of using non-semantic instances of, for example <br /> -->
+		<!-- use label tags -->
 		<form class="formulario">
-			Nombre <input type="text" name="name" id="name" />
-			<br />
-			Edad <input type="number" name="age" id="age" />
+			<label for="name">Nombre</label>
+			<input type="text" name="name" id="name" />
 			<br />
 
-			Nacionalidad
+			<label for="age">Edad</label>
+			<input type="number" name="age" id="age" />
+			<br />
+
+			<label for="nationality">Nacionalidad</label>
 			<select name="nationality" id="nationality">
+				<!-- Perhaps use standarized country codes -->
 				<option value="ar">Argentina</option>
 				<option value="mx">Mexicana</option>
 				<option value="per">Peruana</option>
 				<option value="vnzl">Venezolana</option>
 			</select>
 			<br />
+
 			<input type="submit" />
 		</form>
 
@@ -32,6 +40,5 @@
 			<h2>Lista de invitados</h2>
 		</div>
 
-		<script src="../formulario.js"></script>
 	</body>
 </html>
